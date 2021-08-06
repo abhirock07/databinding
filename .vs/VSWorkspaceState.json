@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src\\app"
+    "\\src\\app",
+    "\\src\\app\\server",
+    "\\src\\app\\servers"
   ],
   "PreviewInSolutionExplorer": false
 }
