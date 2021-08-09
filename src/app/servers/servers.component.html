@@ -1,7 +1,7 @@
 
-<button [disabled]="!allowNewServer">Add Server</button> --> Property Binding concept
-
-<p [innerText]="allowNewServer"> </p> // {{allowNewServer}} -> Dont mixed here String interpolation and property binding.
-
+<button [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button> --> Property Binding concept
+<!--Even Bininding Syntax is () -->
+<!--<p [innerText]="allowNewServer"> </p> // {{allowNewServer}} -> Dont mixed here String interpolation and property binding.-->
+<p>{{serverCreationStatus}}</p>
 <app-server></app-server>
 <app-server></app-server>

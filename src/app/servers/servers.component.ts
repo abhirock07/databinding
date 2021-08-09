@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer = false;
 
+  serverCreationStatus = 'No Server was Created';
+
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;// ES 6 errow function syntax: ()= >
@@ -19,4 +21,7 @@ export class ServersComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onCreateServer() {
+    this.serverCreationStatus = 'Server Was Created';
+  }
 }
