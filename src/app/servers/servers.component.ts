@@ -10,6 +10,9 @@ export class ServersComponent implements OnInit {
 
   serverCreationStatus = 'No Server was Created';
 
+  serverName= 'TestServer';
+  
+
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;// ES 6 errow function syntax: ()= >
@@ -23,5 +26,9 @@ export class ServersComponent implements OnInit {
 
   onCreateServer() {
     this.serverCreationStatus = 'Server Was Created';
+  }
+
+  onUpdateServerName(event: Event) {
+    this.serverName = (<HTMLInputElement>event.target).value;
   }
 }

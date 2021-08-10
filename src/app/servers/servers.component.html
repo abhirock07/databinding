@@ -1,7 +1,28 @@
+<label>Server Name</label>
+<input type="text"
+      class="form-control"
+      (input)="onUpdateServerName($event)"/>
 
-<button [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button> --> Property Binding concept
-<!--Even Bininding Syntax is () -->
-<!--<p [innerText]="allowNewServer"> </p> // {{allowNewServer}} -> Dont mixed here String interpolation and property binding.-->
-<p>{{serverCreationStatus}}</p>
+
+<input type="text"
+       class="form-control"
+       [(ngModel)]="serverName"/>
+
+<p> {{serverName}} </p>
+
+<!--In two way binding we are combine the event and property bidning syntasx is [()] -->
+<!--$event its kind of reserve varibale name , you can use in tampelate when using event binding-->
+
+<button class=" btn-btn-primary"
+
+[disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button> --> Property and Event Binding concept
+
+
+
+<!--Even Bininding Syntax is (click) -->
+<!--<p [innerText]="allowNewServer"> </p> //  -> Dont mixed here String interpolation and property binding.-->
+
+<p>{{ serverCreationStatus }}</p>
+
 <app-server></app-server>
 <app-server></app-server>
