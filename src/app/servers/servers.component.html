@@ -1,12 +1,12 @@
 <label>Server Name</label>
-<input type="text"
+<!--<input type="text"
       class="form-control"
       (input)="onUpdateServerName($event)"/>
-
+  -->
 
 <input type="text"
        class="form-control"
-       [(ngModel)]="serverName"/>
+       [(ngModel)]="serverName" />
 
 <p> {{serverName}} </p>
 
@@ -14,15 +14,24 @@
 <!--$event its kind of reserve varibale name , you can use in tampelate when using event binding-->
 
 <button class=" btn-btn-primary"
-
-[disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button> --> Property and Event Binding concept
+        [disabled]="!allowNewServer" (click)="onCreateServer()">
+  Add Server
+</button> --> Property []and Event Binding () concept
 
 
 
 <!--Even Bininding Syntax is (click) -->
 <!--<p [innerText]="allowNewServer"> </p> //  -> Dont mixed here String interpolation and property binding.-->
+<!--<p>{{ serverCreationStatus }}</p>-->
 
-<p>{{ serverCreationStatus }}</p>
+<p *ngIf="serverCreated; else noServer"> Server was Created and Server name is {{serverName}} </p>--> Directive and his conditinal concept
+
+<ng-template #noServer> No Server was Created </ng-template>
+
 
 <app-server></app-server>
 <app-server></app-server>
+
+<p *ngIf="fruit=='apple'; else otherfruit"> Apple </p>
+
+<ng-template #otherfruit> Other Fruit</ng-template>
