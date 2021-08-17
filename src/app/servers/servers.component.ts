@@ -13,6 +13,8 @@ export class ServersComponent implements OnInit {
   serverName = 'TestServer';
   serverCreated = false;
   fruit = "Orange";
+
+  fruits = ['orange','apple'];
   
 
   constructor() {
@@ -29,6 +31,7 @@ export class ServersComponent implements OnInit {
   onCreateServer() {
 
     this.serverCreated = true;
+    this.fruits.push(this.serverName);
     this.serverCreationStatus = 'Server Was Created';
   }
 
